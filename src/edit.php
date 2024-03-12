@@ -60,14 +60,15 @@ mysqli_close($mysqli);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Modificación Pokémon</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"  crossorigin="anonymous">
 </head>
 
 <body>
-<div>
-    <header>
-        <h1>Panel de Control</h1>
-    </header>
-    
+<div class = "container">
+	<div class="jumbotron">
+		<h1 class="display-4">Panel de control</h1>
+		<p class="lead">Demo app</p>
+	</div>
     <main>              
     <ul>
         <li><a href="index.php" >Inicio</a></li>
@@ -76,35 +77,35 @@ mysqli_close($mysqli);
     <h2>Modificación Pokémon</h2>
 
     <form action="edit.php" method="post">
-        <div>
+    <div class="form-group">
             <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" value="<?php echo $name;?>" required>
+            <input type="text" class="form-control" name="name" id="name" value="<?php echo $name;?>" required>
         </div>
 
-        <div>
+        <div class="form-group">
             <label for="type">Tipo</label>
-            <input type="text" name="type" id="type" value="<?php echo $type;?>" required>
+            <input type="text" class="form-control" name="type" id="type" value="<?php echo $type;?>" required>
         </div>
 
-        <div>
+        <div class="form-group">
             <label for="level">Nivel</label>
-            <input type="number" name="level" id="level" value="<?php echo $level;?>" required>
+            <input type="number" class="form-control" name="level" id="level" value="<?php echo $level;?>" required>
         </div>
 
-        <div>
+        <div class="form-group">
             <label for="trainer">Entrenador</label>
-            <input type="text" name="trainer" id="trainer" value="<?php echo $trainer;?>" required>
+            <input type="text" class="form-control" name="trainer" id="trainer" value="<?php echo $trainer;?>" required>
         </div>
 
-        <div>
+        <div class="form-group">
             <label for="region">Región</label>
-            <input type="text" name="region" id="region" value="<?php echo $region;?>" required>
+            <input type="text" class="form-control" name="region" id="region" value="<?php echo $region;?>" required>
         </div>
 
-        <div>
+        <div class="form-group">
             <input type="hidden" name="id" value=<?php echo $id;?>>
-            <input type="submit" name="modifica" value="Guardar">
-            <input type="button" value="Cancelar" onclick="location.href='index.php'">
+            <input type="submit" name="modifica" value="Guardar" class="form-control">
+            <input type="button" value="Cancelar" class="form-control" onclick="location.href='index.php'">
         </div>
     </form>
 

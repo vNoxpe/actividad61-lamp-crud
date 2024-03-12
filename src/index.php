@@ -11,14 +11,14 @@ $result = mysqli_query($mysqli, "SELECT * FROM pokemon ORDER BY id DESC");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Panel de control</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"  crossorigin="anonymous">
 </head>
 <body>
-<div>
-    <header>
-        <h1>Panel de Control</h1>
-    </header>
-
-    <main>
+<div class = "container">
+	<div class="jumbotron">
+      <h1 class="display-4">Panel de control</h1>
+      <p class="lead">Demo app</p>
+    </div>
     <ul>
         <li><a href="index.php">Inicio</a></li>
         <li><a href="add.html">Alta</a></li>
