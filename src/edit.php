@@ -31,7 +31,7 @@ if(isset($_POST['modifica'])) {
         }
     } else {
         $stmt = mysqli_prepare($mysqli, "UPDATE pokemon SET name=?, type=?, level=?, trainer=?, region=? WHERE id=?");
-        mysqli_stmt_bind_param($stmt, "ssisii", $name, $type, $level, $trainer, $region, $id);
+        mysqli_stmt_bind_param($stmt, "ssisss", $name, $type, $level, $trainer, $region, $id);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_free_result($stmt);
         mysqli_stmt_close($stmt);
